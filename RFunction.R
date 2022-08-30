@@ -45,10 +45,10 @@ tmap_plot <- tmap_leaflet(map_out, mode = "view", show = FALSE) %>%
 ###SAve both the static and interactive map
 #tmap_save(map_out, width=10, height = 8, units = "in", dpi=300, file= "Mapplot_output.jpeg")
 tmap_save(map_out, width=10, height = 8, units = "in", dpi=300,
-           file= paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Mapplot_output.jpeg"))
+           file= paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Static_plot.jpeg"))
 
 #saveWidget(tmap_plot, file="Movedata_intplot.html")
-saveWidget(tmap_plot, file=paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Movedata_intplot.html"))
+saveWidget(tmap_plot, file=paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Interactive_plot.html"))
 
 return(data)
 }
