@@ -3,6 +3,7 @@ library(tmap)
 library(htmlwidgets)
 library(leaflet)
 library(sf)
+library(dplyr)
 
 # tmap_mode("view") ##for interactive plot
 # tmap_mode("plot") ## for static mapplot
