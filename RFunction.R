@@ -49,7 +49,7 @@ tmap_save(map_out, width=10, height = 8, units = "in", dpi=300,
            file= paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Static_plot.jpeg"))
 
 #saveWidget(tmap_plot, file="Movedata_intplot.html")
-#saveWidget(tmap_plot, file=paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Interactive_plot.html"))
+saveWidget(tmap_plot, file=paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Interactive_plot.html"))
 
 return(data)
 }
