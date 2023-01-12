@@ -49,7 +49,16 @@ tmap_save(map_out, width=10, height = 8, units = "in", dpi=300,
            file= paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Static_plot.jpeg"))
 
 #saveWidget(tmap_plot, file="Movedata_intplot.html")
-saveWidget(tmap_plot, file=paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Interactive_plot.html"))
+#saveWidget(tmap_plot, file=paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"Interactive_plot.html"))
+
+# create plot in own working directory
+
+saveWidget(tmap_plot, file="Interactive_plot.html")
+
+# move the plot to the expected artifacts directory
+
+file.copy("Interactive_plot.html", paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/")))
+
 
 return(data)
 }
